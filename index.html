@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ridhi Kumari — Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<canvas id="bg"></canvas>
+
+<div id="app">
+    <p class="hero-name"><span id="typed-name"></span><span class="typed-cursor" id="typed-cursor"></span></p>
+    <p class="hero-sub">Computer Science & Engineering Student · Uttaranchal University</p>
+
+    <nav class="dock">
+        <button class="dock-btn active" id="btn-about" onclick="openPanel('about')">
+            <div class="dot"></div>
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span class="btn-label">About</span>
+        </button>
+        <button class="dock-btn" id="btn-skills" onclick="openPanel('skills')">
+            <div class="dot"></div>
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span class="btn-label">Skills</span>
+        </button>
+        <button class="dock-btn" id="btn-education" onclick="openPanel('education')">
+            <div class="dot"></div>
+            <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+            <span class="btn-label">Education</span>
+        </button>
+        <button class="dock-btn" id="btn-projects" onclick="openPanel('projects')">
+            <div class="dot"></div>
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="btn-label">Projects</span>
+        </button>
+        <button class="dock-btn" id="btn-contact" onclick="openPanel('contact')">
+            <div class="dot"></div>
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="btn-label">Contact</span>
+        </button>
+    </nav>
+</div>
+
+<footer class="footer">
+    <div class="footer-name">Ridhi Kumari</div>
+    <div class="footer-desc">Final Year B.Tech CSE Student @ Uttaranchal University, Dehradun</div>
+</footer>
+
+<div class="panel-overlay" id="overlay" onclick="handleOverlayClick(event)">
+    <div class="panel" id="panel">
+        <button class="close-btn" onclick="closePanel()">✕</button>
+        <div id="panel-content"></div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
